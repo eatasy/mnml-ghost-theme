@@ -14,8 +14,6 @@
     {{#if image}}
     <div class="post-thumbnail" id="{{url}}-post-thumbnail">
       <script type="text/javascript">
-      var mq = window.matchMedia( "(min-width: 500px)" );
-      if (mq.matches){
         var thumbnailContainer = document.getElementById('{{url}}-post-thumbnail')
 
         if (!String.prototype.contains) {
@@ -25,16 +23,9 @@
         }
 
         function homepagePostThumbnail (imgUrl) {
-            {{! Firesize has folded ... still looking for an alternative. }}
-            // if (!imgUrl.contains("http://") && !imgUrl.contains("https://")) {
-            //   fireSizeUrl = "http://firesize.com/x150/g_center/{{@blog.url}}";
-            // } else {
-            //   fireSizeUrl = "http://firesize.com/x150/g_center/";
-            // }
-            thumbnailContainer.innerHTML = '<img src="'+imgUrl+'" style="max-height: 160px;" alt="{{title}}" />';
+            thumbnailContainer.innerHTML = '<img src="'+imgUrl+'" alt="{{title}}" />';
         };
         homepagePostThumbnail("{{image}}");
-      } //end mediaquery if
       </script>
 
     </div>
