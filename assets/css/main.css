@@ -2286,6 +2286,14 @@ hr:after {
     margin-bottom: 1rem;
 }
 
+.post-content a {
+    text-decoration: none;
+}
+
+.post-content a:hover {
+    text-decoration: underline;
+}
+
 .post-thumbnail img {
     max-height: 160px;
 }
